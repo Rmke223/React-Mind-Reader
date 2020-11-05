@@ -1,0 +1,28 @@
+ <div>
+      <div className="container col-6 mx-auto border text-center">
+      <h2>{data[state].heading}</h2>
+      {data[state].buttonM}
+      {data[state].hints}
+      {data[state].buttonB}
+      </div>
+    </div>
+
+
+      var state = 0
+const data =
+  [
+    { heading: "I can read your mind", buttonM: "", hints: "", buttonB: <button onClick={() => nextPage()}>Next</button> },
+    { heading: "Pick a number from 01-99", buttonM: <button onClick={() => nextPage()}>Next</button>, hints: "when you have your number click next", buttonB: <button onClick={() => resetPage()}>Reset</button> },
+    { heading: "", buttonM: "", hints: "", buttonB: "" },
+    { heading: "", buttonM: "", hints: "", buttonB: "" },
+    { heading: "", buttonM: "", hints: "", buttonB: "" },
+    { heading: "", buttonM: "", hints: "", buttonB: "" }
+  ]
+
+function nextPage() {
+  state++
+  console.log(state);
+}
+function resetPage() {
+  console.log('ree');
+}
